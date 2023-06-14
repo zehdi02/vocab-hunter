@@ -36,7 +36,7 @@ function splitLines(fileContent) {
       // otherwise replace '\r' with empty string.
       const wordElement = 
         wordWithoutPunctuation !== '\r' ? 
-        `<span class=${'bg-custom-skyblue'} 
+        `<span class=${'bg-custom-yellow'} 
         style="margin: 2px; line-height: 2em;
         ">${wordWithoutPunctuation}</span>` 
         : ''; 

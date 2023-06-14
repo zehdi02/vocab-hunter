@@ -5,18 +5,29 @@
 
 .bg-custom-orange {
   background: #ffd6a5;
+  border-color: white;
+  border-radius: 5px;
+  padding: 1px 4px;
 }
 .bg-custom-yellow {
   background-color: #ffe895;
+  border-color: white;
+  border-radius: 5px;
+  padding: 1px 4px;
 }
 .bg-custom-skyblue {
   background-color: #c6dfff;
-  border-radius: 5px;
   border-color: white;
+  border-radius: 5px;
   padding: 1px 4px;
 }
 
 span:hover {
-  background-color: white;
+  filter: brightness(90%);
+  -moz-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+
   cursor: pointer;
 }
