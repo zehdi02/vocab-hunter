@@ -1,7 +1,7 @@
 import "./splitLinesToken.css"
 
 function splitLines(fileContent) {
-  // console.log(fileContent);
+  console.log(fileContent);
 
   // Split the content into lines using the newline character (\n)
   const lines = fileContent.split('\n');
@@ -27,15 +27,19 @@ function splitLines(fileContent) {
       // #ffe895 (yellow) for unfamiliar
       // #c6dfff (skyblue) for familiar
 
-      // TODO: Perhaps before applying the <span> tag in wordElement, make a function
-      // to check wordWithoutPunctuation's encountered value
+      // TODO: Perhaps before applying the <span> tag in wordElement, 
+      // make a function to check wordWithoutPunctuation's encountered value
       // (check if unknown/unfamiliar/familiar/known)
 
       // Create separate span tags for word w/ punctuation.
       // If token is not '\r', then enclose word with <span> tag,
       // otherwise replace '\r' with empty string.
       const wordElement = 
-        wordWithoutPunctuation !== '\r' ? `<span class=${'bg-custom-orange'}>${wordWithoutPunctuation}</span>` : ''; 
+        wordWithoutPunctuation !== '\r' ? 
+        `<span class=${'bg-custom-skyblue'} 
+        style="margin: 2px; line-height: 2em;
+        ">${wordWithoutPunctuation}</span>` 
+        : ''; 
       // console.log(wordElement);
 
       // If punctuation is not an empty string, then assign ${punctuation}, 

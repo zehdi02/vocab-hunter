@@ -4,11 +4,19 @@
 #c6dfff (skyblue) for familiar */
 
 .bg-custom-orange {
-  background-color: #ffd6a5;
+  background: #ffd6a5;
 }
 .bg-custom-yellow {
   background-color: #ffe895;
 }
 .bg-custom-skyblue {
   background-color: #c6dfff;
+  border-radius: 5px;
+  border-color: white;
+  padding: 1px 4px;
+}
+
+span:hover {
+  background-color: white;
+  cursor: pointer;
 }
