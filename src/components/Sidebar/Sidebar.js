@@ -1,4 +1,5 @@
 import Reader from "../Reader/Reader";
+import Dictionary from "../Dictionary/Dictionary";
 
 function Sidebar() {
   return (
@@ -13,7 +14,7 @@ function Sidebar() {
 
       <aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
         <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
-            <a href="https://flowbite.com/" class="flex items-center pl-2.5 mb-5">
+            <a href="#" class="flex items-center pl-2.5 mb-5">
               <img src={require('../../imgs/vocab-hunter-icon.png')} class="sm:h-32" alt="Vocab-Hunter Logo" />
               {/* <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span> */}
             </a>
@@ -24,6 +25,16 @@ function Sidebar() {
                       <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
                     </svg>
                     <span class="ml-3">Read</span>
+                    {/* <span class="inline-flex items-center justify-center px-2 ml-3 text-sm font-medium text-gray-800 bg-gray-200 rounded-full dark:bg-gray-700 dark:text-gray-300">
+                      <form className='bg-gray-50 text-white dark:bg-gray-800' id="fileUpload">
+                          <div>
+                            <label className="p-2" for="file_input">
+                              <input type="file" id="upload"
+                              className="text-sm" />
+                            </label>
+                          </div>
+                      </form>
+                    </span> */}
                   </a>
               </li>
               <li>
@@ -73,9 +84,9 @@ function Sidebar() {
         </div>
       </aside>
 
-      <div class="p-4 sm:ml-64">
+      <div class="sm:ml-64 sm:mr-64 flex">
        <Reader />
-        
+       
       </div>
 
       

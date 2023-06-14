@@ -30,7 +30,7 @@
   filter: brightness(85%);
 }
 
-span:hover {
+#word-container span:hover {
   cursor: pointer;
   border: solid 1px black;
   padding: 1px 3px;

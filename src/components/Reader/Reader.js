@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import splitLines from './splitLinesToken';
+import Dictionary from '../Dictionary/Dictionary';
 
 import "./splitLinesToken.css"
 
@@ -28,8 +29,8 @@ function Reader() {
   }, []);
 
   return (
-    <div className="Reader">
-      <form id="fileUpload">
+    <div className='Reader'>
+      <form className='bg-gray-50 text-white dark:bg-gray-800' id="fileUpload">
         <h1 className="p-2 font-medium">Upload .txt file</h1>
           <div>
             <label className="p-2" for="file_input">
@@ -38,9 +39,11 @@ function Reader() {
             </label>
           </div>
       </form>
-      <hr />
-      <div id="word-container"
-      className='font-sans text-xl'></div>
+      <div className="flex ">
+        <hr />
+        <div id="word-container" className='flex-row justify-center font-sans text-xl'></div>
+        <Dictionary />
+      </div>
     </div>
   );
 }
