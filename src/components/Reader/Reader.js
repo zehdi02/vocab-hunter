@@ -3,7 +3,7 @@ import splitLines from './splitLinesToken';
 
 import "./splitLinesToken.css"
 
-function UploadFile() {
+function Reader() {
   useEffect(() => {
     const handleFileChange = (event) => {
       const file = event.target.files[0];
@@ -28,8 +28,8 @@ function UploadFile() {
   }, []);
 
   return (
-    <div className="UploadFile">
-      <form>
+    <div className="Reader">
+      <form id="fileUpload">
         <h1 className="p-2 font-medium">Upload .txt file</h1>
           <div>
             <label className="p-2" for="file_input">
@@ -45,4 +45,4 @@ function UploadFile() {
   );
 }
 
-export default UploadFile;
+export default Reader;

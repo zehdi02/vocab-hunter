@@ -1,33 +1,37 @@
 /* TODO: Find a way to update the span tag's style color.
-#ffd6a5 (orange) for unknown
+#ffd6a5 (red) for unknown
 #ffe895 (yellow) for unfamiliar
 #c6dfff (skyblue) for familiar */
 
-.bg-custom-orange {
-  background: #ffd6a5;
-  border-color: white;
+.bg-custom-red {
+  background: #FD8A8A;
   border-radius: 5px;
   padding: 1px 4px;
 }
+.bg-custom-red:hover {
+  filter: brightness(85%);
+}
+
 .bg-custom-yellow {
   background-color: #ffe895;
-  border-color: white;
   border-radius: 5px;
   padding: 1px 4px;
 }
+.bg-custom-yellow:hover {
+  filter: brightness(85%);
+}
+
 .bg-custom-skyblue {
   background-color: #c6dfff;
-  border-color: white;
   border-radius: 5px;
   padding: 1px 4px;
+}
+.bg-custom-skyblue:hover {
+  filter: brightness(85%);
 }
 
 span:hover {
-  filter: brightness(90%);
-  -moz-transition: all .2s ease-in;
-  -o-transition: all .2s ease-in;
-  -webkit-transition: all .2s ease-in;
-  transition: all .2s ease-in;
-
   cursor: pointer;
+  border: solid 1px black;
+  padding: 1px 3px;
 }

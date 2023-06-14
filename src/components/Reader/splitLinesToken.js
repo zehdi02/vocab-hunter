@@ -1,7 +1,7 @@
 import "./splitLinesToken.css"
 
 function splitLines(fileContent) {
-  console.log(fileContent);
+  // console.log(fileContent);
 
   // Split the content into lines using the newline character (\n)
   const lines = fileContent.split('\n');
@@ -23,7 +23,7 @@ function splitLines(fileContent) {
       // console.log(punctuation);
 
       // TODO: Find a way to update the span tag's style color.
-      // #ffd6a5 (orange) for unknown
+      // #ffd6a5 (red) for unknown
       // #ffe895 (yellow) for unfamiliar
       // #c6dfff (skyblue) for familiar
 
@@ -36,7 +36,7 @@ function splitLines(fileContent) {
       // otherwise replace '\r' with empty string.
       const wordElement = 
         wordWithoutPunctuation !== '\r' ? 
-        `<span class=${'bg-custom-yellow'} 
+        `<span class=${'bg-custom-red'} 
         style="margin: 2px; line-height: 2em;
         ">${wordWithoutPunctuation}</span>` 
         : ''; 

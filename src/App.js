@@ -1,12 +1,12 @@
 import "./App.css";
-import UploadFile from "./components/UploadFile";
+import Reader from "./components/Reader/Reader";
 
 
 function App() {
   return (
     <div className="App">
 
-      <UploadFile />
+      <Reader />
       
     </div>
   );
