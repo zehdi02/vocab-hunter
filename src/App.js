@@ -1,6 +1,10 @@
+import UploadFile from "./components/UploadFile";
+
 function App() {
   return (
     <div className="App">
+
+      <UploadFile />
       
     </div>
   );
