@@ -30,10 +30,17 @@ function UploadFile() {
   return (
     <div className="UploadFile">
       <form>
-        <input type="file" id="upload" />
+        <h1 className="p-2 font-medium">Upload .txt file</h1>
+          <div>
+            <label className="p-2" for="file_input">
+              <input type="file" id="upload"
+              className="text-sm" />
+            </label>
+          </div>
       </form>
       <hr />
-      <div id="word-container"></div>
+      <div id="word-container"
+      className='font-sans text-xl'></div>
     </div>
   );
 }

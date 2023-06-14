@@ -52,7 +52,7 @@ function splitLines(fileContent) {
     const lineContent = tokenWord.join(' ');
 
     // Enclose the line's content with a <p> tag, OR empty string if empty.
-    return lineContent !== '' ? `<p>${lineContent}</p>` : '';
+    return lineContent !== '' ? `<p style="padding:1em 1em;">${lineContent}</p>` : '';
   });
   // console.log(lineElements);
   
