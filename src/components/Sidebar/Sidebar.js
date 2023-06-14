@@ -15,27 +15,26 @@ function Sidebar() {
       <aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
         <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
             <a href="#" class="flex items-center pl-2.5 mb-5">
-              <img src={require('../../imgs/vocab-hunter-icon.png')} class="sm:h-32" alt="Vocab-Hunter Logo" />
+              <img src={require('../../imgs/vocab-hunter-icon.png')} class="sm:h-36 transition duration-300 ease-in-out hover:scale-110" alt="Vocab-Hunter Logo" />
               {/* <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span> */}
             </a>
             <ul class="space-y-2 font-medium">
-              <li>
+              <li className="flex ">
                   <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
                     </svg>
                     <span class="ml-3">Read</span>
-                    {/* <span class="inline-flex items-center justify-center px-2 ml-3 text-sm font-medium text-gray-800 bg-gray-200 rounded-full dark:bg-gray-700 dark:text-gray-300">
-                      <form className='bg-gray-50 text-white dark:bg-gray-800' id="fileUpload">
-                          <div>
-                            <label className="p-2" for="file_input">
-                              <input type="file" id="upload"
-                              className="text-sm" />
-                            </label>
-                          </div>
-                      </form>
-                    </span> */}
                   </a>
+                  
+                  <label for='upload' href="" class="cursor-pointer flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M9 8.25H7.5a2.25 2.25 0 00-2.25 2.25v9a2.25 2.25 0 002.25 2.25h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25H15m0-3l-3-3m0 0l-3 3m3-3V15" />
+                    </svg>
+                    <span class="ml-3">Upload text</span>
+                  </label>
+                  <input type="file" id="upload" style={{ display: `none` }}
+                    className="text-sm" />
               </li>
               <li>
                   <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
