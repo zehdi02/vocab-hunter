@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import splitLines from './splitLinesToken';
 
+import "./splitLinesToken.css"
 
 function UploadFile() {
   useEffect(() => {

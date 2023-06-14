@@ -1,0 +1,14 @@
+/* TODO: Find a way to update the span tag's style color.
+#ffd6a5 (orange) for unknown
+#ffe895 (yellow) for unfamiliar
+#c6dfff (skyblue) for familiar */
+
+.bg-custom-orange {
+  background-color: #ffd6a5;
+}
+.bg-custom-yellow {
+  background-color: #ffe895;
+}
+.bg-custom-skyblue {
+  background-color: #c6dfff;
+}

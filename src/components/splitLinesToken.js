@@ -1,3 +1,5 @@
+import "./splitLinesToken.css"
+
 function splitLines(fileContent) {
   // console.log(fileContent);
 
@@ -23,13 +25,17 @@ function splitLines(fileContent) {
       // TODO: Find a way to update the span tag's style color.
       // #ffd6a5 (orange) for unknown
       // #ffe895 (yellow) for unfamiliar
-      // #c6dfff (sky-blue) for familiar
+      // #c6dfff (skyblue) for familiar
+
+      // TODO: Perhaps before applying the <span> tag in wordElement, make a function
+      // to check wordWithoutPunctuation's encountered value
+      // (check if unknown/unfamiliar/familiar/known)
 
       // Create separate span tags for word w/ punctuation.
       // If token is not '\r', then enclose word with <span> tag,
       // otherwise replace '\r' with empty string.
       const wordElement = 
-        wordWithoutPunctuation !== '\r' ? `<span style="background-color: #c6dfff;">${wordWithoutPunctuation}</span>` : ''; 
+        wordWithoutPunctuation !== '\r' ? `<span class=${'bg-custom-orange'}>${wordWithoutPunctuation}</span>` : ''; 
       // console.log(wordElement);
 
       // If punctuation is not an empty string, then assign ${punctuation}, 
