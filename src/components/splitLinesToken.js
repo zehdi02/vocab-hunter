@@ -20,11 +20,16 @@ function splitLines(fileContent) {
       const punctuation = word.replace(/[\w\s]/g, '');  
       // console.log(punctuation);
 
+      // TODO: Find a way to update the span tag's style color.
+      // #ffd6a5 (orange) for unknown
+      // #ffe895 (yellow) for unfamiliar
+      // #c6dfff (sky-blue) for familiar
+
       // Create separate span tags for word w/ punctuation.
       // If token is not '\r', then enclose word with <span> tag,
       // otherwise replace '\r' with empty string.
       const wordElement = 
-        wordWithoutPunctuation !== '\r' ? `<span>${wordWithoutPunctuation}</span>` : ''; 
+        wordWithoutPunctuation !== '\r' ? `<span style="background-color: #c6dfff;">${wordWithoutPunctuation}</span>` : ''; 
       // console.log(wordElement);
 
       // If punctuation is not an empty string, then assign ${punctuation}, 
