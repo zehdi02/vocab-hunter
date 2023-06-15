@@ -10,13 +10,13 @@ function splitLines(fileContent) {
   // Process each line
   const lineElements = lines.map((line) => {
     const words = line.split(' ');  // Split the line into words
-    console.log(words);
+    // console.log(words);
     
     // Tokenize each word, and add span tags if its a word -- not if its a punctuation.
     const tokenWord = words.map((word) => {
       // Remove punctuation from word w/ RegEx. Replace any whitespace w/ empty string.
       const wordWithoutPunctuation = word.replace(/[^\w\s]+/g, '');  
-      // console.log(wordWithoutPunctuation);
+      console.log(wordWithoutPunctuation);
       
       // Remove any character&whitespace from word w/ RegEx. Replace all non-punctuations w/ empty string.
       const punctuation = word.replace(/[\w\s]/g, '');  

@@ -2,24 +2,23 @@ import React, { Component, useState } from "react";
 
 export default class Login extends Component {
 
-
-
   handleClickLogin = () => {
     this.props.toggle();
   };
   render() {
     return (
       <div className="modal">
-        <div className="modal_content">
-          <span className="close" onClick={this.handleClickLogin}>&times;    </span>
+        <div className="modal_content px-2">
+          <span className="close" onClick={this.handleClickLogin}></span>
           <form>
-            <label for="name">Name</label>
-            <input type="text" id="username" name="username" placeholder="Enter your username"></input>
+            <label className="text-white" for="name">Name</label>
+            <input className="rounded my-1 px-1" type="text" id="username" name="username" placeholder="Enter username"></input>
             <br></br>
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" placeholder="Enter your password"></input>
+
+            <label className="text-white" for="password">Password</label>
+            <input className="rounded my-1 px-1" type="password" id="password" name="password" placeholder="Enter password"></input>
             <br></br>
-            <button >Login</button>
+            <button className="px-2 mt-2 text-gray-800 bg-gray-200 rounded-lg dark:bg-gray-700 dark:text-gray-300">Sign In</button>
           </form>
         </div>
       </div>

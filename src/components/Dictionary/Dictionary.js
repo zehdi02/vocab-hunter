@@ -10,7 +10,7 @@ function Dictionary() {
   }
 
   return (
-    <div className="fixed top-0 right-0 h-screen w-64 max-w-max px-6 py-4 bg-gray-50 text-white dark:bg-gray-800">
+    <aside className="fixed top-0 right-0 h-screen w-64 max-w-max px-6 py-4 bg-gray-50 text-white dark:bg-gray-800">
       <h1 className='text-3xl font-medium text-gray-900 dark:text-white'>Dictionary</h1>
       <hr></hr>
       <div className="definition">
@@ -56,7 +56,7 @@ function Dictionary() {
         src='https://media.tenor.com/9z3rpvYfoDIAAAAC/sonic-and-mario-kiss.gif' />
       </div>
       <hr></hr>
-    </div>
+    </aside>
   )
 }
 
