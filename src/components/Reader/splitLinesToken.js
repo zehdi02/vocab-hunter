@@ -6,7 +6,7 @@ function splitLines(fileContent) {
   // Split the content into lines using the newline character (\n)
   const lines = fileContent.split('\n');
   // console.log(lines);
-  
+
   // Process each line
   const lineElements = lines.map((line) => {
     const words = line.split(' ');  // Split the line into words
@@ -16,8 +16,8 @@ function splitLines(fileContent) {
     const tokenWord = words.map((word) => {
       // Remove punctuation from word w/ RegEx. Replace any whitespace w/ empty string.
       const wordWithoutPunctuation = word.replace(/[^\w\s]+/g, '');  
-      console.log(wordWithoutPunctuation);
-      
+      //console.log(wordWithoutPunctuation);
+
       // Remove any character&whitespace from word w/ RegEx. Replace all non-punctuations w/ empty string.
       const punctuation = word.replace(/[\w\s]/g, '');  
       // console.log(punctuation);
@@ -31,14 +31,18 @@ function splitLines(fileContent) {
       // make a function to check wordWithoutPunctuation's encountered value
       // (check if unknown/unfamiliar/familiar/known)
 
+      //Handles the event when the user overs over the word on the main page
+
       // Create separate span tags for word w/ punctuation.
       // If token is not '\r', then enclose word with <span> tag,
       // otherwise replace '\r' with empty string.
-      const wordElement = 
+      const wordElement =
         wordWithoutPunctuation !== '\r' ? 
-        `<span class=${'bg-custom-red'} 
-        style="margin: 2px; line-height: 2em;
-        ">${wordWithoutPunctuation}</span>` 
+        `<span 
+            id="wordWithoutPunctuation" class=${'bg-custom-red'} style="margin: 2px; line-height: 2em;"
+          >
+            ${wordWithoutPunctuation}
+          </span>` 
         : ''; 
       // console.log(wordElement);
 

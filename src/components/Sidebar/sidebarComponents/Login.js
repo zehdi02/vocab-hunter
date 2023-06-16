@@ -18,7 +18,7 @@ export default class Login extends Component {
             <label className="text-white" for="password">Password</label>
             <input className="rounded my-1 px-1" type="password" id="password" name="password" placeholder="Enter password"></input>
             <br></br>
-            <button className="px-2 mt-2 text-gray-800 bg-gray-200 rounded-lg dark:bg-gray-700 dark:text-gray-300">Sign In</button>
+            <button className="px-2 mt-2 text-gray-800 bg-gray-200 rounded-lg dark:bg-gray-700 text-gray-300">Sign In</button>
           </form>
         </div>
       </div>

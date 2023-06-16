@@ -39,9 +39,12 @@ function Reader() {
             </label>
           </div>
       </form> */}
+
       <div className="flex ">
         <hr />
-        <div id="word-container" className='flex-row justify-center font-sans text-xl'></div>
+        <div id="word-container" className='flex-row justify-center font-sans text-xl'>
+        </div>
+
         <Dictionary />
       </div>
     </div>
