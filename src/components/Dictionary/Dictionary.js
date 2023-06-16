@@ -20,9 +20,9 @@ function Dictionary() {
           `https://api.dictionaryapi.dev/api/v2/entries/en_US/${word}`
         ).then((response) => {
           setData(response.data[0]);
-          console.log(response.data[0])
+          // console.log(response.data[0])
         }).catch((error) => {
-          console.log("Error: ", error);
+          // console.log("Error: ", error);
         })
       }
     }
@@ -78,7 +78,7 @@ function Dictionary() {
               {data.meanings.map((meaning) => {
                 const joinedSynonyms = 
                   meaning.synonyms.length ? meaning.synonyms.join('; ') + '; ' : '';
-                console.log(joinedSynonyms);
+                // console.log(joinedSynonyms);
                 return joinedSynonyms;
               })}
             </span>

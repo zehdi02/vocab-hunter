@@ -11,7 +11,7 @@ export default class Login extends Component {
       <div className="modal">
         <div className="modal_content px-2">
           <span className="close" onClick={this.handleClickLogin}></span>
-          <form>
+          <form className="pb-2">
             <label className="text-white" for="name">Name</label>
             <input className="rounded my-1 px-1" type="text" id="username" name="username" placeholder="Enter username"></input>
             <br></br>
@@ -19,7 +19,7 @@ export default class Login extends Component {
             <label className="text-white" for="password">Password</label>
             <input className="rounded my-1 px-1" type="password" id="password" name="password" placeholder="Enter password"></input>
             <br></br>
-            <button className="px-2 mt-2 text-gray-800 bg-gray-200 rounded-lg dark:bg-gray-700 text-gray-300">Sign In</button>
+            <button className="px-2 mt-2 text-gray-800 bg-gray-200 rounded-lg dark:bg-gray-700 dark:text-gray-300">Sign In</button>
           </form>
         </div>
       </div>

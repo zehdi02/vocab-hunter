@@ -17,7 +17,7 @@ export default function Signup() {
 
   function updateForm(value){
     return setForm((prev) => {
-      return {...prev, ...value};
+      return {...prev, ...value}; 
     });
   }
 

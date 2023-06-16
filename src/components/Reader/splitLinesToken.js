@@ -1,6 +1,7 @@
-import "./splitLinesToken.css"
+import React, { useState } from 'react';
+import "./SplitLinesToken.css"
 
-function splitLines(fileContent) {
+const SplitLinesToken = (fileContent) => {
   // console.log(fileContent);
 
   // Split the content into lines using the newline character (\n)
@@ -23,9 +24,15 @@ function splitLines(fileContent) {
       // console.log(punctuation);
 
       // TODO: Find a way to update the span tag's style color.
-      // #ffd6a5 (red) for unknown
-      // #ffe895 (yellow) for unfamiliar
-      // #c6dfff (skyblue) for familiar
+        // #ffd6a5 (red) for unknown
+        // #ffe895 (yellow) for unfamiliar
+        // #c6dfff (skyblue) for familiar
+      // TODO:
+        // When user presses key '1', highlight word RED (unknown)
+        // When user presses key '2', highlight word YELLOW (unfamiliar)
+        // When user presses key '3', highlight word SKY-BLUE (familiar)
+        // When user presses key '4', un-highlight the word (known)
+        
 
       // TODO: Perhaps before applying the <span> tag in wordElement, 
       // make a function to check wordWithoutPunctuation's encountered value
@@ -36,10 +43,16 @@ function splitLines(fileContent) {
       // Create separate span tags for word w/ punctuation.
       // If token is not '\r', then enclose word with <span> tag,
       // otherwise replace '\r' with empty string.
+
+      // const wordElement =
+      //   wordWithoutPunctuation !== '\r' ? 
+      //   `<span 
+      //       id="wordWithoutPunctuation" class=${`bg-custom-red`} style="margin: 2px; line-height: 2em;"
+      //     >${wordWithoutPunctuation}</span>` : ''; 
       const wordElement =
         wordWithoutPunctuation !== '\r' ? 
-        `<span 
-            id="wordWithoutPunctuation" class=${'bg-custom-red'} style="margin: 2px; line-height: 2em;"
+        `<span class=${`bg-custom-red`}
+            id="wordWithoutPunctuation" style="margin: 2px; line-height: 2em;"
           >${wordWithoutPunctuation}</span>` : ''; 
       // console.log(wordElement);
 
@@ -65,4 +78,4 @@ function splitLines(fileContent) {
   return lineElements.join('');
 }
 
-export default splitLines;
+export default SplitLinesToken;
