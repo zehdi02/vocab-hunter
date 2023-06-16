@@ -1,5 +1,7 @@
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import React from 'react'
 import Reader from './_features/Reader/Reader'
+import User from './Sidebar/Pages/User';
 
 function Content() {
   return (
@@ -8,7 +10,10 @@ function Content() {
     md:pl-8 md:mr-64
     lg:ml-64
     ">
-        <Reader />
+      <Reader />
+      <Routes>
+        <Route path="/user" element={<User />} />
+      </Routes>
     </div>
   )
 }
