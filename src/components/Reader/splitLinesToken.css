@@ -33,5 +33,6 @@
 #word-container span:hover {
   cursor: pointer;
   border: solid 1px black;
+  border-radius: 5px;
   padding: 1px 3px;
 }
