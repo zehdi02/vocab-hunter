@@ -40,10 +40,7 @@ function splitLines(fileContent) {
         wordWithoutPunctuation !== '\r' ? 
         `<span 
             id="wordWithoutPunctuation" class=${'bg-custom-red'} style="margin: 2px; line-height: 2em;"
-          >
-            ${wordWithoutPunctuation}
-          </span>` 
-        : ''; 
+          >${wordWithoutPunctuation}</span>` : ''; 
       // console.log(wordElement);
 
       // If punctuation is not an empty string, then assign ${punctuation}, 
