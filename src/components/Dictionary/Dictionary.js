@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
-import { Link } from 'react-router-dom';
 
 function Dictionary() {
   const [brightness, setBrightness] = useState(0);
