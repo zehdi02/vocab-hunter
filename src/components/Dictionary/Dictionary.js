@@ -1,18 +1,22 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function Dictionary() {
   const [brightness, setBrightness] = useState(0);
-  const clickedWord = "Hello"
 
   const toggleBrightness = () => {
     const newBrightness = brightness === 0 ? 100 : 0;
     setBrightness(newBrightness);
   }
 
+  const [clickedWord, setClickedWord] = useState('')
+
   useEffect(() => {
     const handleClick = (event) => {
       if(event.target.id === 'wordWithoutPunctuation'){
-        console.log("Span clicked: ", event.target.innerText);
+        const word = event.target.innerText;
+        
+        //console.log("Span clicked | Word: ", word);
+        setClickedWord(word);
         event.stopPropagation();
       }
     }
@@ -76,7 +80,7 @@ function Dictionary() {
 
       <div className="word-image">
         <h1 className='text-lg font-medium text-gray-900 text-white'>Image</h1>
-        <img className="" id='word-image-show' 
+        <img className="" id='word-image-show' alt = "Word" 
         style={{ filter: `brightness(${brightness}%)` }}
         onClick={toggleBrightness}
         src='https://media.tenor.com/9z3rpvYfoDIAAAAC/sonic-and-mario-kiss.gif' />
