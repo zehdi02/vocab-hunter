@@ -10,7 +10,7 @@ export default class Signup extends Component {
       <div className="modal">
         <div className="modal_content px-2">
           <span className="close" onClick={this.handleClick}></span>
-          <form>
+          <form className="pb-2">
             <label className="text-white" for="name">Name</label>
             <input className="rounded my-1 px-1" type="text" id="username" name="username" placeholder="Enter username"></input>
             <br></br>
