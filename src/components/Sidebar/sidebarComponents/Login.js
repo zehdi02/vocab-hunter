@@ -1,10 +1,11 @@
-import React, { Component, useState } from "react";
+import React, { Component } from "react";
 
 export default class Login extends Component {
 
   handleClickLogin = () => {
     this.props.toggle();
   };
+
   render() {
     return (
       <div className="modal">
