@@ -36,7 +36,11 @@ function Dictionary() {
   }, []);
 
   return (
-    <aside className="fixed top-0 right-0 h-screen w-64 max-w-max px-6 py-4 bg-gray-50 text-white bg-gray-800">
+    <aside className="Dictionary 
+      transition-transform translate-x-full md:translate-x-0
+      sm:block transition-transform
+      fixed top-0 right-0 z-40 w-64 
+      h-screen max-w-max px-6 py-4 bg-gray-50 text-white bg-gray-800">
       <h1 className='text-3xl font-medium text-gray-900 text-white'>Dictionary</h1>
       
       {data && (

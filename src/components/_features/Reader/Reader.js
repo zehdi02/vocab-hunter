@@ -1,8 +1,9 @@
 import { useEffect } from 'react';
-import Dictionary from '../Dictionary/Dictionary';
+import SplitLinesToken from './SplitLinesToken';
+// import Dictionary from '../../Dictionary/Dictionary';
 import Highlighter from '../Highlighter/Highlighter';
 
-import SplitLinesToken from './SplitLinesToken';
+import "./SplitLinesToken.css"
 
 function Reader() {
   useEffect(() => {
@@ -38,7 +39,6 @@ function Reader() {
         </div>
 
         <Highlighter />
-        <Dictionary />
       </div>
     </div>
   );

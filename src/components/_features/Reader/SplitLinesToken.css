@@ -30,6 +30,9 @@
   filter: brightness(85%);
 }
 
+#word-container span {
+  padding: 1px 4px;
+}
 #word-container span:hover {
   cursor: pointer;
   border: solid 1px black;
