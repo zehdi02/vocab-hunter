@@ -4,6 +4,7 @@ import { ObjectId } from "mongodb";
 import bcrypt from 'bcrypt';
 
 const router = express.Router();
+let userId = 0;
 
 //Lists all the records in the database
 router.get("/", async(req, res) => {
@@ -34,17 +35,16 @@ async function hashPassword(password){
 
 //Create a new record
 router.post("/", async(req, res) => {
-    let newPassword = req.body.password;
-    let wordBank = {};
-    // let hashedPassword = await hashPassword(newPassword);
-    
     let newDoucment = {
+        _id: userId,
         name: req.body.name,
-        password: newPassword,
-        wordBank: wordBank
+        password: req.body.password,
+        wordBank: {}
     };
 
-    let collection = await db.collection("users");
+    userId++;
+
+    let collection = db.collection("users");
     let result = await collection.insertOne(newDoucment);
 
     res.send(result).status(204);
