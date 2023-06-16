@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import SplitLinesToken from './SplitLinesToken';
-import Dictionary from '../Dictionary/Dictionary';
+// import Dictionary from '../../Dictionary/Dictionary';
 import Highlighter from '../Highlighter/Highlighter';
 
 import "./SplitLinesToken.css"
@@ -39,7 +39,6 @@ function Reader() {
         </div>
 
         <Highlighter />
-        <Dictionary />
       </div>
     </div>
   );

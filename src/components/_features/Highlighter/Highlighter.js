@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import 'highlight.js/styles/default.css';
 
 function Highlighter() {
 

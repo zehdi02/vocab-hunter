@@ -70,7 +70,7 @@ const SplitLinesToken = (fileContent) => {
     const lineContent = tokenWord.join(' ');
 
     // Enclose the line's content with a <p> tag, OR empty string if empty.
-    return lineContent !== '' ? `<p style="padding:1em 1em;">${lineContent}</p>` : '';
+    return lineContent !== '' ? `<p class='py-4'>${lineContent}</p>` : '';
   });
   // console.log(lineElements);
   
