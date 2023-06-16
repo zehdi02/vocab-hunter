@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import splitLines from './splitLinesToken';
+import SplitLinesToken from './SplitLinesToken';
 import Dictionary from '../Dictionary/Dictionary';
 import Highlighter from '../Highlighter/Highlighter';
 
@@ -13,7 +13,7 @@ function Reader() {
 
       reader.addEventListener('load', () => {
         const fileContent = reader.result;
-        const processedContent = splitLines(fileContent);
+        const processedContent = SplitLinesToken(fileContent);
         const wordContainer = document.getElementById('word-container');
         wordContainer.innerHTML = processedContent;
       });
