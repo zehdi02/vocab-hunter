@@ -3,16 +3,19 @@
 }
 
 .wordbank td {
+  font-size: larger;
   text-align: center;
   vertical-align: middle;
   border: solid 1px;
   background-color: rgb(55 65 81);
   color: rgb(229 231 235);
   font-weight: 600;
+  padding: .75rem 0;
 }
 
 .wordbank th {
-  padding: 1rem;
+  font-size: x-large;
+  padding: 1.5rem 0;
   border: solid 1px;
   background-color: rgb(17 24 39);
 }

@@ -4,10 +4,11 @@ import './Vocabulary.css'
 function Vocabulary() {
   return (
     <div className="Vocab flex flex-col
-    h-fit text-gray-200 bg-gray-800 rounded-xl px-8 py-4
+    h-fit text-gray-200 bg-gray-800 rounded-xl 
+    px-8 py-8 my-2
     ">
-      <div className="title text-2xl font-bold text-center 
-      flex-initial">
+      <div className="title text-4xl font-bold text-center 
+      flex-initial pb-2">
         Your Vocabulary
       </div>
       <div className="wordbank px-2 py-4 flex-1">
@@ -22,54 +23,6 @@ function Vocabulary() {
             <tr><td>label1</td><td>value1</td></tr>
             <tr><td>label2</td><td>value2</td></tr>
             <tr><td>label3</td><td>value3</td></tr>
-            <tr><td>label4</td><td>value4</td></tr>
-            <tr><td>label4</td><td>value4</td></tr>
-            <tr><td>label4</td><td>value4</td></tr>
-            <tr><td>label4</td><td>value4</td></tr>
-            <tr><td>label4</td><td>value4</td></tr>
-            <tr><td>label4</td><td>value4</td></tr>
-            <tr><td>label4</td><td>value4</td></tr>
-            <tr><td>label4</td><td>value4</td></tr>
-            <tr><td>label4</td><td>value4</td></tr>
-            <tr><td>label4</td><td>value4</td></tr>
-            <tr><td>label4</td><td>value4</td></tr>
-            <tr><td>label4</td><td>value4</td></tr>
-            <tr><td>label4</td><td>value4</td></tr>
-            <tr><td>label4</td><td>value4</td></tr>
-            <tr><td>label4</td><td>value4</td></tr>
-            <tr><td>label4</td><td>value4</td></tr>
-            <tr><td>label4</td><td>value4</td></tr>
-            <tr><td>label4</td><td>value4</td></tr>
-            <tr><td>label4</td><td>value4</td></tr>
-            <tr><td>label4</td><td>value4</td></tr>
-            <tr><td>label4</td><td>value4</td></tr>
-            <tr><td>label4</td><td>value4</td></tr>
-            <tr><td>label4</td><td>value4</td></tr>
-            <tr><td>label4</td><td>value4</td></tr>
-            <tr><td>label4</td><td>value4</td></tr>
-            <tr><td>label4</td><td>value4</td></tr>
-            <tr><td>label4</td><td>value4</td></tr>
-            <tr><td>label4</td><td>value4</td></tr>
-            <tr><td>label4</td><td>value4</td></tr>
-            <tr><td>label4</td><td>value4</td></tr>
-            <tr><td>label4</td><td>value4</td></tr>
-            <tr><td>label4</td><td>value4</td></tr>
-            <tr><td>label4</td><td>value4</td></tr>
-            <tr><td>label4</td><td>value4</td></tr>
-            <tr><td>label4</td><td>value4</td></tr>
-            <tr><td>label4</td><td>value4</td></tr>
-            <tr><td>label4</td><td>value4</td></tr>
-            <tr><td>label4</td><td>value4</td></tr>
-            <tr><td>label4</td><td>value4</td></tr>
-            <tr><td>label4</td><td>value4</td></tr>
-            <tr><td>label4</td><td>value4</td></tr>
-            <tr><td>label4</td><td>value4</td></tr>
-            <tr><td>label4</td><td>value4</td></tr>
-            <tr><td>label4</td><td>value4</td></tr>
-            <tr><td>label4</td><td>value4</td></tr>
-            <tr><td>label4</td><td>value4</td></tr>
-            <tr><td>label4</td><td>value4</td></tr>
-            <tr><td>label4</td><td>value4</td></tr>
             <tr><td>label4</td><td>value4</td></tr>
             <tr><td>label4</td><td>value4</td></tr>
             <tr><td>label4</td><td>value4</td></tr>
