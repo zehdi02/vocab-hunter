@@ -1,5 +1,4 @@
 import React from "react";
-import Signup from "./Signup";
 import Login from "./Login";
 
 export default class LoginSignup extends React.Component {
@@ -44,7 +43,6 @@ export default class LoginSignup extends React.Component {
               <span class="flex-1 ml-3 whitespace-nowrap">Sign Up</span>
               </a>
           </div>
-          {this.state.seenSignup && <Signup toggle={this.togglePopSignup} />}
         </li>
       </ul>
     );
