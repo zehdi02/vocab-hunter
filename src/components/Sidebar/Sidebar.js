@@ -1,8 +1,4 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Reader from "../_features/Reader/Reader";
-import LoginSignup from "./sidebarComponents/LoginSignup";
-
-import User from "./Pages/User";
 
 function Sidebar() {
   return (
@@ -37,17 +33,17 @@ function Sidebar() {
         aria-label="Sidebar"
       >
         <div class="h-full px-3 py-4 overflow-y-auto bg-gray-800">
-          <a href="#" class="flex items-center pl-2.5 mb-5">
+          <Link to="/home" class="flex items-center pl-2.5 mb-5">
             <img
               src={require("../../imgs/vocab-hunter-icon.png")}
               class="sm:h-36 transition duration-300 ease-in-out hover:scale-110"
               alt="Vocab-Hunter Logo"
             />
-          </a>
+          </Link>
           <ul class="space-y-2 font-medium">
             <li>
-              <a
-                href="#"
+              <Link
+                to="/home"
                 class="flex items-center p-2 text-gray-900 rounded-lg text-white hover:bg-gray-100 hover:bg-gray-700"
               >
                 <svg
@@ -65,11 +61,11 @@ function Sidebar() {
                   />
                 </svg>
                 <span class="flex-1 ml-3 whitespace-nowrap">Home</span>
-              </a>
+              </Link>
             </li>
             <li className="flex ">
-              <a
-                href="#"
+              <Link
+                to="/reader"
                 class="flex items-center p-2 text-gray-900 rounded-lg text-white hover:bg-gray-100 hover:bg-gray-700"
               >
                 <svg
@@ -87,7 +83,7 @@ function Sidebar() {
                   />
                 </svg>
                 <span class="ml-3">Read</span>
-              </a>
+              </Link>
               <label
                 for="upload"
                 href=""
@@ -118,8 +114,8 @@ function Sidebar() {
             </li>
 
             <li>
-              <a
-                href="#"
+              <Link
+                to="/vocabulary"
                 class="flex items-center p-2 text-gray-900 rounded-lg text-white hover:bg-gray-100 hover:bg-gray-700"
               >
                 <svg
@@ -139,11 +135,11 @@ function Sidebar() {
                 <span class="flex-1 ml-3 whitespace-nowrap">
                   Your Vocabulary{" "}
                 </span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                to="/languages"
                 class="flex items-center p-2 text-gray-900 rounded-lg text-white hover:bg-gray-100 hover:bg-gray-700"
               >
                 <svg
@@ -166,11 +162,11 @@ function Sidebar() {
                 <span class="inline-flex items-center justify-center w-3 h-3 p-3 ml-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300">
                   ENG
                 </span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                to="/settings"
                 class="flex items-center p-2 text-gray-900 rounded-lg text-white hover:bg-gray-100 hover:bg-gray-700"
               >
                 <svg
@@ -193,7 +189,7 @@ function Sidebar() {
                   />
                 </svg>
                 <span class="flex-1 ml-3 whitespace-nowrap">Settings</span>
-              </a>
+              </Link>
             </li>
             <li className="flex ">
               <Link
@@ -218,7 +214,6 @@ function Sidebar() {
               </Link>
             </li>
           </ul>
-          <LoginSignup />
         </div>
       </aside>
 
