@@ -1,6 +1,8 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-
 function Sidebar() {
+
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
   return (
     <div className="Sidebar">
       <button
@@ -112,6 +114,7 @@ function Sidebar() {
                 className="text-sm"
               />
             </li>
+        
 
             <li>
               <Link

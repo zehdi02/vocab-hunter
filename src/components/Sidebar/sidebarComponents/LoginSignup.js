@@ -1,5 +1,4 @@
 import React from "react";
-import Signup from "./Signup";
 import Login from "./Login";
 
 export default class LoginSignup extends React.Component {
@@ -34,6 +33,7 @@ export default class LoginSignup extends React.Component {
           </div>
           {this.state.seenLogin && <Login toggle={this.togglePopLogin} />}
         </li>
+        
         <li>
           <div className="btn" onClick={this.togglePopSignup}>
             <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg text-white hover:bg-gray-100 hover:bg-gray-700">
@@ -43,7 +43,6 @@ export default class LoginSignup extends React.Component {
               <span class="flex-1 ml-3 whitespace-nowrap">Sign Up</span>
               </a>
           </div>
-          {this.state.seenSignup && <Signup toggle={this.togglePopSignup} />}
         </li>
       </ul>
     );

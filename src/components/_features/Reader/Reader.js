@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import SplitLinesToken from "./SplitLinesToken";
-// import Dictionary from '../../Dictionary/Dictionary';
 import Highlighter from "../Highlighter/Highlighter";
+
 
 import "./SplitLinesToken.css";
 
