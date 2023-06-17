@@ -48,7 +48,7 @@ function Dictionary() {
         className="inline-flex items-center p-3 text-sm text-gray-500 bg-gray-700 rounded-lg z-50
         md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200
         dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600
-        fixed opacity-0 h-full right-0 top-0"
+        fixed opacity-100 h-full right-0 top-0"
         onClick={() => setIsSidebarOpen(!isSidebarOpen)}
       >
         <span className="sr-only">Open sidebar</span>

@@ -1,7 +1,6 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import SplitLinesToken from "./SplitLinesToken";
 import Highlighter from "../Highlighter/Highlighter";
-
 
 import "./SplitLinesToken.css";
 
@@ -48,6 +47,7 @@ function Reader() {
           <div>READER</div>
           <div>READER</div>
           <div>READER</div>
+
         </div>
 
         <Highlighter />

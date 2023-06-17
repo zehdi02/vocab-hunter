@@ -7,7 +7,8 @@ import Settings from "./Sidebar/Pages/Settings";
 import User from "./Sidebar/Pages/User";
 import Home from "./Sidebar/Pages/Home";
 
-function Content() {
+
+const Content = () => {
   return (
     <div
       className="Content h-screen
