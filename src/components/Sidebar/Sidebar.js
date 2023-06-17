@@ -1,5 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import React, { useState } from "react";
+import LoginButton from "./sidebarComponents/LoginSystem/LoginButton";
+import LogoutButton from "./sidebarComponents/LoginSystem/LogoutButton";
 function Sidebar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -216,6 +218,9 @@ function Sidebar() {
               </Link>
             </li>
           </ul>
+
+          <LoginButton/>
+          <LogoutButton/>
         </div>
       </aside>
 
