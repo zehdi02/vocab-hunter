@@ -209,7 +209,8 @@ const Sidebar = () => {
             <li className="flex ">
               <Link
                 to="/user"
-                class="flex items-center p-2 text-gray-900 rounded-lg text-white hover:bg-gray-100 hover:bg-gray-700"
+                class="flex items-center p-2 pr-6 text-gray-900 rounded-lg text-white 
+                  hover:bg-gray-100 hover:bg-gray-700"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -227,10 +228,10 @@ const Sidebar = () => {
                 </svg>
                 <span class="ml-3">You</span>
               </Link>
+              <LoginButton />
+              <LogoutButton />
             </li>
           </ul>
-          <LoginButton />
-          <LogoutButton />
         </div>
       </aside>
 
