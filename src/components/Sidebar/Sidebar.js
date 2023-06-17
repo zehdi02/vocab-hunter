@@ -67,6 +67,7 @@ function Sidebar() {
                 <span class="flex-1 ml-3 whitespace-nowrap">Home</span>
               </Link>
             </li>
+            
             <li className="flex ">
               <Link
                 to="/reader"
@@ -141,6 +142,7 @@ function Sidebar() {
                 </span>
               </Link>
             </li>
+
             <li>
               <Link
                 to="/languages"
@@ -168,6 +170,7 @@ function Sidebar() {
                 </span>
               </Link>
             </li>
+
             <li>
               <Link
                 to="/settings"
@@ -195,6 +198,7 @@ function Sidebar() {
                 <span class="flex-1 ml-3 whitespace-nowrap">Settings</span>
               </Link>
             </li>
+
             <li className="flex ">
               <Link
                 to="/user"

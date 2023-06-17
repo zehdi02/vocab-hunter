@@ -1,8 +1,10 @@
+import { useAuth0 } from "@auth0/auth0-react";
 import React from "react";
+import JSONPretty from "react-json-pretty";
 // import {} form 'react-router-dom';
 
 function User() {
-
+  const {user} = useAuth0();
   
   return (
     <div className="User h-full bg-gray-800 rounded-xl">
@@ -61,7 +63,7 @@ function User() {
           <div class="mt-20 text-center border-b pb-12">
             {" "}
             <h1 class="text-4xl font-medium text-gray-200">
-              user-guest,
+              {user.nickname}
               <span class="font-light text-gray-300"> age</span>
             </h1>{" "}
             <p class="font-light text-gray-300 mt-3">Bucharest, Romania</p>{" "}
