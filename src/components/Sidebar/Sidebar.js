@@ -3,6 +3,8 @@ import Reader from '../_features/Reader/Reader'
 import LoginSignup from "./sidebarComponents/LoginSignup";
 
 import User from "./Pages/User";
+import LoginButton from './sidebarComponents/LoginSystem/LoginButton';
+import LogoutButton from './sidebarComponents/LoginSystem/LogoutButton';
 
 function Sidebar() {
   return (
@@ -22,6 +24,7 @@ function Sidebar() {
             <a href="#" class="flex items-center pl-2.5 mb-5">
               <img src={require('../../imgs/vocab-hunter-icon.png')} class="sm:h-36 transition duration-300 ease-in-out hover:scale-110" alt="Vocab-Hunter Logo" />
             </a>
+
             <ul class="space-y-2 font-medium">
               <li>
                 <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg text-white hover:bg-gray-100 hover:bg-gray-700">
@@ -31,6 +34,7 @@ function Sidebar() {
                   <span class="flex-1 ml-3 whitespace-nowrap">Home</span>
                 </a>
               </li>
+
               <li className="flex ">
                 <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg text-white hover:bg-gray-100 hover:bg-gray-700">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -56,6 +60,7 @@ function Sidebar() {
                   <span class="flex-1 ml-3 whitespace-nowrap">Your Vocabulary </span>
                 </a>
               </li>
+
               <li>
                 <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg text-white hover:bg-gray-100 hover:bg-gray-700">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -65,6 +70,7 @@ function Sidebar() {
                   <span class="inline-flex items-center justify-center w-3 h-3 p-3 ml-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300">ENG</span>
                 </a>
               </li>
+
               <li>
                 <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg text-white hover:bg-gray-100 hover:bg-gray-700">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -74,6 +80,7 @@ function Sidebar() {
                   <span class="flex-1 ml-3 whitespace-nowrap">Settings</span>
                 </a>
               </li>
+              
               <li className="flex ">
                 {/* <Router> */}
                   <Link to="/user" class="flex items-center p-2 text-gray-900 rounded-lg text-white hover:bg-gray-100 hover:bg-gray-700">
@@ -89,7 +96,10 @@ function Sidebar() {
               </li>
 
             </ul>
-            <LoginSignup />
+            
+            {/* <LoginSignup /> */}
+            <LoginButton/>
+            <LogoutButton/>
           </div>
         </aside>
 

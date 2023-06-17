@@ -24,21 +24,11 @@ router.get("/:id", async(req, res) => {
     else res.send(result).status(200);
 })
 
-//Encrpyts the user's password
-async function hashPassword(password){
-    const saltRounds = 10;
-    const salt = await bcrypt.genSalt(saltRounds);
-    const hashedPassword = await bcrypt.hash(password, salt);
-
-    return hashedPassword;
-}
-
 //Create a new record
 router.post("/", async(req, res) => {
     let newDoucment = {
         _id: userId,
         name: req.body.name,
-        password: req.body.password,
         wordBank: {}
     };
 
