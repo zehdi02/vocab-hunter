@@ -4,35 +4,40 @@
 #c6dfff (skyblue) for familiar */
 
 .bg-custom-red {
-  background: #FD8A8A;
+  background: #B82D2D;
   border-radius: 5px;
   padding: 1px 4px;
 }
+
 .bg-custom-red:hover {
   filter: brightness(85%);
 }
 
 .bg-custom-yellow {
-  background-color: #ffe895;
+  background-color: #417E44;
   border-radius: 5px;
   padding: 1px 4px;
 }
+
 .bg-custom-yellow:hover {
   filter: brightness(85%);
 }
 
 .bg-custom-skyblue {
-  background-color: #c6dfff;
+  background-color: #4475A2;
   border-radius: 5px;
   padding: 1px 4px;
 }
+
 .bg-custom-skyblue:hover {
   filter: brightness(85%);
 }
 
 #word-container span {
   padding: 1px 4px;
+  font-size: 1.75rem;
 }
+
 #word-container span:hover {
   cursor: pointer;
   border: solid 1px black;

@@ -4,10 +4,10 @@ import JSONPretty from "react-json-pretty";
 // import {} form 'react-router-dom';
 
 function User() {
-  const {user} = useAuth0();
-  
+  const { user } = useAuth0();
+
   return (
-    <div className="User h-full bg-gray-800 rounded-xl">
+    <div className="User h-screen bg-gray-800 rounded-xl mt-2">
       <div class="p-16">
         <div class="p-8 bg-gray-600 shadow mt-24 rounded-md">
           {" "}

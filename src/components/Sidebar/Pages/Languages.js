@@ -18,7 +18,7 @@ function Languages() {
           <div className="translation-lang flex">
             <span className="text-2xl ml-4 px-2">Translation Language:</span>
             <a className="flex ml-4 px-2" href="#">
-              <img className="w-2/12 rounded-lg hover:brightness-75" src='https://flagicons.lipis.dev/flags/4x3/us.svg' />
+              <img className="w-2/12 rounded-lg hover:brightness-75" src='https://flagicons.lipis.dev/flags/4x3/es.svg' />
             </a>
           </div>
         </div>

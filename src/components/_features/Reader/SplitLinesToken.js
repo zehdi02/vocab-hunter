@@ -1,7 +1,6 @@
 import "./SplitLinesToken.css"
 
 const SplitLinesToken = (fileContent) => {
-
   let path = window.location.pathname
   if (path !== '/reader') {
     console.log(path);
@@ -77,10 +76,10 @@ const SplitLinesToken = (fileContent) => {
     const lineContent = tokenWord.join(' ');
 
     // Enclose the line's content with a <p> tag, OR empty string if empty.
-    return lineContent !== '' ? `<p class='py-4'>${lineContent}</p>` : '';
+    return lineContent !== '' ?
+      `<p class='text-white border rounded-xl my-4 p-4 bg-gray-800'>${lineContent}</p>` : '';
   });
   // console.log(lineElements);
-
   // Join the line elements to form the final processed content
   return lineElements.join('');
 }

@@ -7,11 +7,10 @@ import Settings from "./Sidebar/Pages/Settings";
 import User from "./Sidebar/Pages/User";
 import Home from "./Sidebar/Pages/Home";
 
-
 const Content = () => {
   return (
     <div
-      className="Content h-screen
+      className="Content h-max bg-gray-300
     sm:px-8 sm:py-4 
     md:pl-8 md:mr-64
     lg:ml-64
