@@ -3,15 +3,13 @@ import './Vocabulary.css'
 
 function Vocabulary() {
   return (
-    <div className="Vocab flex flex-col
-    h-fit text-gray-200 bg-gray-800 rounded-xl 
-    px-8 py-8 my-2
-    ">
-      <div className="title text-4xl font-bold text-center 
-      flex-initial pb-2">
-        Your Vocabulary
+    <div className="languages flex flex-col h-screen my-2 text-gray-200 
+      bg-gray-800 rounded-xl px-8 py-4">
+      <div className="header text-4xl font-bold text-center pt-4">
+        <span>Your Vocabulary</span>
+        <hr className="mt-4 mb-4"></hr>
       </div>
-      <div className="wordbank px-2 py-4 flex-1">
+      <div className="wordbank px-2 pb-4 flex-1">
         <table className="table-fixed border border-gray-200 rounded-full">
           <thead className="text-xl border">
             <tr className="known-bank">
