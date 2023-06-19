@@ -1,15 +1,16 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import { useAuth0 } from "@auth0/auth0-react";
-import JSONPretty from "react-json-pretty";
+// import { useAuth0 } from "@auth0/auth0-react";
 
 function Home() {
-  const { user } = useAuth0();
+  // const { user } = useAuth0();
 
   return (
     <div className="HOME flex flex-col h-screen my-2 text-gray-200 bg-gray-800 rounded-xl px-8 py-4">
       <div className="welcome text-6xl font-bold text-center pt-4">
-        Welcome, {user.nickname}!
+        {/* Commented out to avoid error when trying to set
+            /home as root path '/'
+            Welcome, {user.nickname}! */}
+        Welcome!
       </div>
       <div className="intro-guide-tips px-2 py-4 flex-1 flex flex-col">
 

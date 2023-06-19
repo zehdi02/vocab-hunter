@@ -41,7 +41,7 @@ const Sidebar = () => {
         aria-label="Sidebar"
       >
         <div class="h-full px-3 py-4 overflow-y-auto bg-gray-800">
-          <Link to="/home" class="flex items-center pl-2.5 mb-5">
+          <Link to="" class="flex items-center pl-2.5 mb-5">
             <img
               src={require("../../imgs/vocab-hunter-icon.png")}
               class="sm:h-36 transition duration-300 ease-in-out hover:scale-110"
