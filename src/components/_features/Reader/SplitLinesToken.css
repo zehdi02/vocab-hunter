@@ -39,6 +39,9 @@
 
 #word-container span {
   padding: 1px 4px;
+  margin: 2px;
+  line-height: 2em;
+  font-weight: 500;
 }
 
 #word-container span:hover {

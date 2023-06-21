@@ -58,7 +58,6 @@ const SplitLinesToken = (fileContent) => {
         wordWithoutPunctuation !== '\r' ?
           `<span class=${`bg-custom-red`}
             id="wordWithoutPunctuation" 
-            style="margin: 2px; line-height: 2em; font-weight: 500;"
           >${wordWithoutPunctuation}</span>` : '';
       // console.log(wordElement);
 

@@ -25,7 +25,8 @@ function Dictionary() {
           setData(response.data[0]);
           // console.log(response.data[0])
         }).catch((error) => {
-          // console.log("Error: ", error);
+          console.log("Error: ", error.response.data.title + ` for '${word}'`, error);
+          alert(error.response.data.title + ` for '${word}'`, error);
         })
       }
     }
@@ -89,6 +90,7 @@ function Dictionary() {
           </div>
         )}
         <hr></hr>
+
         {data && data.meanings && data.meanings.length > 0 && data.meanings[0].definitions && data.meanings[0].definitions.length > 0 && ( // Add null checks for nested properties
           <div className="definition pt-1 pb-3">
             <h1 className='text-lg font-medium text-gray-900 text-white'>Definition</h1>
@@ -100,6 +102,7 @@ function Dictionary() {
           </div>
         )}
         <hr></hr>
+
         <div className='synonyms pt-1 pb-3'>
           <h1 className='text-lg font-medium text-gray-900 text-white'>Synonyms</h1>
           {data && data.meanings && data.meanings.length > 0 && data.meanings[0].definitions && data.meanings[0].definitions.length > 0 && data.meanings[0].definitions[0].synonyms && data.meanings[0].definitions[0].synonyms.length > 0 ? (
@@ -119,6 +122,7 @@ function Dictionary() {
           )}
         </div>
         <hr></hr>
+
         <div className='antonyms pt-1 pb-3'>
           <h1 className='text-lg font-medium text-gray-900 text-white'>Antonyms</h1>
           {data && data.meanings && data.meanings.length > 0 && data.meanings[0].definitions && data.meanings[0].definitions.length > 0 && data.meanings[0].definitions[0].antonyms && data.meanings[0].definitions[0].antonyms.length > 0 ? (
@@ -137,6 +141,7 @@ function Dictionary() {
           )}
         </div>
         <hr></hr>
+
         <div className="sentence pt-1 pb-3">
           <h1 className='text-lg font-medium text-gray-900 text-white'>Sample sentence</h1>
           {data && data.meanings && data.meanings.length > 0 && data.meanings[0].definitions && data.meanings[0].definitions.length > 0 && data.meanings[0].definitions[0].example ? (
@@ -150,6 +155,7 @@ function Dictionary() {
           )}
         </div>
         <hr></hr>
+
         <div className="translation pt-1 pb-3">
           <h1 className='text-lg font-medium text-gray-900 text-white'>Translation</h1>
           <div className='text-gray-200 bg-gray-700 rounded-lg p-1 px-2 text-sm'>
@@ -159,6 +165,7 @@ function Dictionary() {
           </div>
         </div>
         <hr></hr>
+
         <div className="word-image pt-1 pb-3">
           <h1 className='text-lg font-medium text-gray-900 text-white'>Image</h1>
           <img className="mt-2 rounded-lg cursor-pointer" id='word-image-show' alt="Word"
@@ -166,6 +173,7 @@ function Dictionary() {
             onClick={toggleBrightness}
             src='https://media.tenor.com/9z3rpvYfoDIAAAAC/sonic-and-mario-kiss.gif' />
         </div>
+
       </aside>
     </div>
   )

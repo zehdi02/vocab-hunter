@@ -1,9 +1,8 @@
 import "./App.css";
 import Sidebar from "./components/Sidebar/Sidebar";
-import Content from "./components/Content";
 import Dictionary from "./components/Dictionary/Dictionary";
 
-import { BrowserRouter as Router, Routes, Route, useRoutes } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from "./components/Sidebar/Pages/Home";
 import Vocabulary from "./components/Sidebar/Pages/Vocabulary";
 import Languages from "./components/Sidebar/Pages/Languages";
