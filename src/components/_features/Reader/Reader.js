@@ -1,11 +1,19 @@
-import { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import SplitLinesToken from "./SplitLinesToken";
 import Highlighter from "../Highlighter/Highlighter";
-
-
 import "./SplitLinesToken.css";
+import ReactDOM from 'react-dom';
 
 function Reader() {
+  const [showModal, setShowModal] = useState(false);
+  const [clickedWord, setClickedWord] = useState("");
+
+  const handleWordClick = (word) => {
+    console.log("Clicked word:", word);
+    setShowModal(true);
+    setClickedWord(word);
+  };
+
   useEffect(() => {
     const handleFileChange = (event) => {
       const file = event.target.files[0];
@@ -13,9 +21,9 @@ function Reader() {
 
       reader.addEventListener("load", () => {
         const fileContent = reader.result;
-        const processedContent = SplitLinesToken(fileContent);
+        const processedContent = SplitLinesToken(fileContent, handleWordClick);
         const wordContainer = document.getElementById("word-container");
-        wordContainer.innerHTML = processedContent;
+        ReactDOM.render(processedContent, wordContainer);
       });
 
       reader.readAsText(file);
@@ -29,29 +37,30 @@ function Reader() {
     };
   }, []);
 
+  const closeModal = () => {
+    setShowModal(false);
+    setClickedWord("");
+  };
+
   return (
     <div className="Reader">
-      <div className="flex ">
+      <div className="flex">
         <div
           id="word-container"
           className="flex-row justify-center font-sans text-xl"
-        >
-          {/* populate with the text file's content */}
-          <div>READER</div>
-          <div>READER</div>
-          <div>READER</div>
-          <div>READER</div>
-          <div>READER</div>
-          <div>READER</div>
-          <div>READER</div>
-          <div>READER</div>
-          <div>READER</div>
-          <div>READER</div>
-          <div>READER</div>
-        </div>
+        ></div>
 
         <Highlighter />
       </div>
+
+      {/* Modal component (implement according to your modal implementation) */}
+      {showModal && (
+        <div className="modal">
+          {/* Modal content */}
+          <p>Clicked word: {clickedWord}</p>
+          <button onClick={closeModal}>Close</button>
+        </div>
+      )}
     </div>
   );
 }
