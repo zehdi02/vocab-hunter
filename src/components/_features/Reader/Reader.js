@@ -1,19 +1,13 @@
 import React, { useEffect, useState } from "react";
 import SplitLinesToken from "./SplitLinesToken";
 import Highlighter from "../Highlighter/Highlighter";
+
 import "./SplitLinesToken.css";
-import ReactDOM from 'react-dom';
 
 function Reader() {
+  const [processedContent, setProcessedContent] = useState(null);
+  const [selectedWord, setSelectedWord] = useState(null);
   const [showModal, setShowModal] = useState(false);
-  const [clickedWord, setClickedWord] = useState("");
-
-  const handleWordClick = (word) => {
-    console.log("Clicked word:", word);
-    setShowModal(true);
-    setClickedWord(word);
-  };
-
   useEffect(() => {
     const handleFileChange = (event) => {
       const file = event.target.files[0];
@@ -21,9 +15,8 @@ function Reader() {
 
       reader.addEventListener("load", () => {
         const fileContent = reader.result;
-        const processedContent = SplitLinesToken(fileContent, handleWordClick);
-        const wordContainer = document.getElementById("word-container");
-        ReactDOM.render(processedContent, wordContainer);
+        const content = SplitLinesToken({ fileContent, handleWordClick });
+        setProcessedContent(content);
       });
 
       reader.readAsText(file);
@@ -37,29 +30,39 @@ function Reader() {
     };
   }, []);
 
-  const closeModal = () => {
+  const handleWordClick = (word) => {
+    setSelectedWord(word);
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
     setShowModal(false);
-    setClickedWord("");
   };
 
   return (
-    <div className="Reader">
-      <div className="flex">
-        <div
-          id="word-container"
-          className="flex-row justify-center font-sans text-xl"
-        ></div>
-
+    <div className="Reader h-screen">
+      <div className="flex w-fit m-auto font-bold">
+        <div id="" className="flex-row h-100 justify-center font-sans text-xl">
+          <div id="word-container"  className="flex-grow">
+            {processedContent ? (
+              processedContent
+            ) : (
+              <div
+                className="w-full text-center bg-blue-100 border-t border-b border-blue-500 text-blue-700 px-4 py-3"
+                role="alert"
+              >
+                <p className="text-4xl font-bold">Ready to Read!</p>
+                <p className="text-xl">
+                  Please click on the 'Upload text' tab to start reading.
+                </p>
+              </div>
+            )}
+          </div>
+        </div>
         <Highlighter />
       </div>
-
-      {/* Modal component (implement according to your modal implementation) */}
       {showModal && (
-        <div className="modal">
-          {/* Modal content */}
-          <p>Clicked word: {clickedWord}</p>
-          <button onClick={closeModal}>Close</button>
-        </div>
+        <p>Selected Word: {selectedWord}</p>
       )}
     </div>
   );

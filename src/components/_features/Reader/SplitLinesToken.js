@@ -1,35 +1,36 @@
 import React from 'react';
-
-const SplitLinesToken = (fileContent, handleWordClick) => {
+import "./SplitLinesToken.css"
+const SplitLinesToken = ({ fileContent, handleWordClick }) => {
+  let path = window.location.pathname
+  if (path !== '/reader') {
+    console.log(path);
+    console.log('terminating...');
+    return
+  }
   const lines = fileContent.split('\n');
 
-  const lineElements = lines.map((line, lineIndex) => {
+  const lineElements = lines.map((line, index) => {
     const words = line.split(' ');
 
     const tokenWord = words.map((word, wordIndex) => {
       const wordWithoutPunctuation = word.replace(/[^\w\s]+/g, '');
       const punctuation = word.replace(/[\w\s]/g, '');
 
-      const handleWordClickWrapper = () => {
-        handleWordClick(wordWithoutPunctuation);
-      };
-
       const wordElement =
         wordWithoutPunctuation !== '\r' ? (
           <span
             className="bg-custom-red"
-            key={`word-${lineIndex}-${wordIndex}`}
-            style={{ margin: '2px', lineHeight: '2em' }}
-            onClick={handleWordClickWrapper}
+            id={`wordWithoutPunctuation_${index}_${wordIndex}`}
+            onClick={() => handleWordClick(wordWithoutPunctuation)}
           >
             {wordWithoutPunctuation}
           </span>
-        ) : null;
+        ) : '';
 
-      const punctuationElement = punctuation !== '' ? punctuation : '';
+      const punctuationElement = punctuation !== '' ? `${punctuation}` : '';
 
       return (
-        <React.Fragment key={`token-${lineIndex}-${wordIndex}`}>
+        <React.Fragment key={`${index}_${wordIndex}`}>
           {wordElement}
           {punctuationElement}
         </React.Fragment>
@@ -37,15 +38,15 @@ const SplitLinesToken = (fileContent, handleWordClick) => {
     });
 
     const lineContent = (
-      <p className="py-4" key={`line-${lineIndex}`}>
+      <p key={`line_${index}`} className="text-white border rounded-xl my-4 p-4 bg-gray-800">
         {tokenWord}
       </p>
     );
 
-    return lineContent;
+    return <React.Fragment key={`lineElement_${index}`}>{lineContent}</React.Fragment>;
   });
 
-  return lineElements;
+  return <React.Fragment>{lineElements}</React.Fragment>;
 };
 
 export default SplitLinesToken;
