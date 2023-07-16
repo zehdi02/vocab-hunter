@@ -41,7 +41,7 @@ function Reader() {
             </div>
           </div>
         </div>
-        <Highlighter />
+    
       </div>
     </div>
   );

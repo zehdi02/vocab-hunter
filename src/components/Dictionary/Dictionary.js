@@ -2,6 +2,10 @@ import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
 
 function Dictionary() {
+
+
+
+
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const [brightness, setBrightness] = useState(0);
@@ -14,20 +18,115 @@ function Dictionary() {
   const [data, setData] = useState("");
 
   useEffect(() => {
+
+    let highlightedWord = null;
+
     const handleClick = (event) => {
       if (event.target.id === 'wordWithoutPunctuation') {
-        const word = event.target.innerText;
-        // console.log(event.target);
-        // event.target.classList.remove('bg-custom-red', 'bg-custom-yellow', 'bg-custom-skyblue')
-        Axios.get(
-          `https://api.dictionaryapi.dev/api/v2/entries/en_US/${word}`
-        ).then((response) => {
-          setData(response.data[0]);
-          // console.log(response.data[0])
-        }).catch((error) => {
-          console.log("Error: ", error.response.data.title + ` for '${word}'`, error);
-          alert(error.response.data.title + ` for '${word}'`, error);
-        })
+        const wordElement = event.target;
+        const word = wordElement.innerText;
+
+        // Remove highlighting from the previous highlighted word
+        const previousHighlightedWord = document.querySelector('.color-highlight');
+        if (previousHighlightedWord) {
+          previousHighlightedWord.classList.remove('color-highlight');
+        }
+
+        // Highlight the current word
+        wordElement.classList.add('color-highlight');
+
+        // Set the highlighted word
+        highlightedWord = wordElement;
+
+        // Add event listeners to the buttons
+        const redButton = document.querySelector('#buttonColorRed');
+        const greenButton = document.querySelector('#buttonColorGreen');
+        const blueButton = document.querySelector('#buttonColorBlue');
+        const noColorButton = document.querySelector('#buttonColorNoColor');
+
+        if (redButton) {
+          redButton.addEventListener('click', handleRedButtonClick);
+        }
+        if (greenButton) {
+          greenButton.addEventListener('click', handleGreenButtonClick);
+        }
+        if (blueButton) {
+          blueButton.addEventListener('click', handleBlueButtonClick);
+        }
+        if (noColorButton) {
+          noColorButton.addEventListener('click', handleNoColorButtonClick);
+        }
+
+        // Fetch data from the dictionary API
+        Axios.get(`https://api.dictionaryapi.dev/api/v2/entries/en_US/${word}`)
+          .then((response) => {
+            setData(response.data[0]);
+          })
+          .catch((error) => {
+            console.log(
+              "Error:",
+              error.response.data.title + ` for '${word}'`,
+              error
+            );
+            alert(
+              error.response.data.title + ` for '${word}'`,
+              error
+            );
+          });
+      }
+    };
+    function handleRedButtonClick() {
+      console.log("Red button clicked");
+      if (highlightedWord && document.getElementById('wordWithoutPunctuation')) {
+        const words = document.getElementsByTagName('span');
+        for (let i = 0; i < words.length; i++) {
+          const word = words[i];
+          if (word.textContent === highlightedWord.textContent) {
+            word.classList.remove('bg-custom-yellow', 'bg-custom-skyblue');
+            word.classList.add('bg-custom-red');
+          }
+        }
+      }
+    }
+
+    function handleGreenButtonClick() {
+      console.log("Green button clicked");
+      if (highlightedWord && document.getElementById('wordWithoutPunctuation')) {
+        const words = document.getElementsByTagName('span');
+        for (let i = 0; i < words.length; i++) {
+          const word = words[i];
+          if (word.textContent === highlightedWord.textContent) {
+            word.classList.remove('bg-custom-red', 'bg-custom-skyblue');
+            word.classList.add('bg-custom-yellow');
+          }
+        }
+      }
+    }
+
+    function handleBlueButtonClick() {
+      console.log("Blue button clicked");
+      if (highlightedWord && document.getElementById('wordWithoutPunctuation')) {
+        const words = document.getElementsByTagName('span');
+        for (let i = 0; i < words.length; i++) {
+          const word = words[i];
+          if (word.textContent === highlightedWord.textContent) {
+            word.classList.remove('bg-custom-red', 'bg-custom-yellow');
+            word.classList.add('bg-custom-skyblue');
+          }
+        }
+      }
+    }
+
+    function handleNoColorButtonClick() {
+      console.log("No Color button clicked");
+      if (highlightedWord && document.getElementById('wordWithoutPunctuation')) {
+        const words = document.getElementsByTagName('span');
+        for (let i = 0; i < words.length; i++) {
+          const word = words[i];
+          if (word.textContent === highlightedWord.textContent) {
+            word.classList.remove('bg-custom-red', 'bg-custom-yellow', 'bg-custom-skyblue');
+          }
+        }
       }
     }
 
@@ -35,7 +134,8 @@ function Dictionary() {
 
     return () => {
       document.removeEventListener('click', handleClick);
-    }
+    };
+
 
   }, []);
 
@@ -87,6 +187,21 @@ function Dictionary() {
                 <path stroke-linecap="round" stroke-linejoin="round" d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z" />
               </svg>
             </div>
+            <div className="highlight-buttons">
+              <button id="buttonColorRed" >
+                Red
+              </button>
+              <button id="buttonColorGreen" >
+                Green
+              </button>
+              <button id="buttonColorBlue" >
+                Blue
+              </button>
+              <button id="buttonColorNoColor" >
+                No Color
+              </button>
+            </div>
+
           </div>
         )}
         <hr></hr>
