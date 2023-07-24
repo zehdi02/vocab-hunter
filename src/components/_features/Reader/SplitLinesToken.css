@@ -50,3 +50,42 @@
   border-radius: 5px;
   padding: 1px 3px;
 }
+#buttonColorRed {
+  background-color: #FF0000; /* Red color */
+}
+
+#buttonColorGreen {
+  background-color: #4CAF50; /* Green color */
+}
+
+#buttonColorNoColor {
+  background-color: #CCCCCC; /* Light Gray color */
+  color: black;
+}
+#buttonColorBlue {
+  background-color: #00BFFF; /* Light Blue color */
+}
+
+
+.highlight-buttons button {
+  background-color: #2196F3; /* Blue color (default for all buttons) */
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.highlight-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+  .highlight-buttons button {
+    margin-right: 5px;
+  }
+}
