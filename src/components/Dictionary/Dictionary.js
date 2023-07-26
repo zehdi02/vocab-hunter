@@ -18,7 +18,6 @@ function Dictionary() {
   const [data, setData] = useState("");
 
   useEffect(() => {
-
     let highlightedWord = null;
 
     const handleClick = (event) => {
@@ -286,7 +285,7 @@ function Dictionary() {
           <img className="mt-2 rounded-lg cursor-pointer" id='word-image-show' alt="Word"
             style={{ filter: `brightness(${brightness}%)` }}
             onClick={toggleBrightness}
-            src='https://media.tenor.com/9z3rpvYfoDIAAAAC/sonic-and-mario-kiss.gif' />
+            src=''/>
         </div>
 
       </aside>
